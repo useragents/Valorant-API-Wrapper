@@ -55,7 +55,7 @@ class valorant_api:
             "Authorization": "Bearer {}".format(access_token)
         }
         check_url = "https://pd.{}.a.pvp.net/store/v1/entitlements/{}/e7c63390-eda7-46e0-bb7a-a6abdacd2433".format(region, puuid)
-        api_skin_list_url = "https://raw.githubusercontent.com/useragents/Valorant-Account-Checker-with-Capture/main/skin_list.txt"
+        api_skin_list_url = "https://raw.githubusercontent.com/useragents/Valorant-API-Wrapper/main/skin_list.txt"
         user_skins = self.session.get(check_url, headers = headers).json()["Entitlements"]
         skin_list = self.session.get(api_skin_list_url).text.splitlines()
         skins = []
